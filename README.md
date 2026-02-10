@@ -11,7 +11,7 @@ e.g. 2
 <img width="976" height="866" alt="image" src="https://github.com/user-attachments/assets/ff56d4bd-5f29-42a1-bd10-d543cb935e7a" />
 
 
-### How to use this extension:
+### How to install this extension:
 Follow all the original author's instructions below to:
 1. Create your own unique Client ID (in the Google Cloud Developer Dashboard) & edit the Manifest.json with that Client ID
 2. Enable developer-mode in Chrome Extensions
@@ -23,6 +23,10 @@ You also need to ensure the project is in "Testing Mode", NOT production mode.**
 _**Note:** OAuth access tokens expire every 7 days, so you will have to re-sign back into the extension every week to keep using it._
 
 WORKING AS OF 2/10/26
+
+## How to use this extension
+1. Go to your Youtube playlists
+2. Go specifically the page where you view your full playlist, then click the extension the toolbar.
 
 -----------------
 
@@ -243,6 +247,7 @@ testing for Safari before an update.
 
 I also am not familiar with Safari at all and if it even has an extension store
 or what is involved in adding it.
+
 
 
 
