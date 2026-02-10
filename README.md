@@ -1,6 +1,32 @@
 # Youtube Playlist Search
+## Fabian's Description
+Hi all, I have VERY large playlists on Youtube (as a result of migrating my Spotify playlists over) and I needed a quick solution to be able index and search these playlists. This extension by hallzy worked but had to updated to Manifest V3 to work. This is a very rough port, but it does work!
 
-## Description
+**It currently only works with Chrome** ( I know MS Edge says theres an imcompatible API, haven't looked too deep into it. Not sure about other Chromium browsers...).
+
+e.g. 1
+<img width="984" height="871" alt="image" src="https://github.com/user-attachments/assets/ea78f705-4b8d-42c3-91cb-7848ab67b340" />
+
+e.g. 2
+<img width="976" height="866" alt="image" src="https://github.com/user-attachments/assets/ff56d4bd-5f29-42a1-bd10-d543cb935e7a" />
+
+
+### How to use this extension:
+Follow all the instructions below to:
+1. Create your own unique Client ID (in the Google Cloud Developer Dashboard) & edit the Manifest.json with that Client ID
+2. Enable developer-mode in Chrome Extensions
+3. Load the entire folder for the cloned project as an Unpacked Extension in Chrome Extensions
+
+**In the Google Cloud Developer Dashboard screen, after that you need to go Audience > Test Users > "add your youtube email here".
+You also need to ensure the project is in "Testing Mode", NOT production mode.**
+
+_**Note:** OAuth access tokens expire every 7 days, so you will have to re-sign back into the extension every week to keep using it._
+
+-----------------
+
+## Original Description
+
+### Description
 
 This started as a copy of the "Playlist Search For YouTube" extension, but I am
 cleaning it up and customizing it to my liking.
@@ -9,7 +35,7 @@ cleaning it up and customizing it to my liking.
 
 ![Screenshot 2](screenshot-2.png)
 
-## Limitations
+### Limitations
 
 - You must authenticate with Google when using the extension for the first time
   so that the extension is able to use the YouTube API.
@@ -26,7 +52,7 @@ cleaning it up and customizing it to my liking.
     - If you try to use this extension without changing the API key, you will
       probably see errors (REF: #7).
 
-## Customizations
+### Customizations
 
 - Searching is now more 'fuzzy', so it searches words individually instead of
   together.
@@ -47,7 +73,7 @@ cleaning it up and customizing it to my liking.
 - Local storage of videos for large playlists for fast retrieval
   - Fetch button to force fetch the playlist from the API
 
-## Installation
+### Installation
 
 I do not have this in the Chrome Extension Store, and I never will. Apparently
 Google requires that you pay a $5 registration fee to become an extension
@@ -88,7 +114,7 @@ from Google that allows the extension to retrieve information from the API.
 Optionally, you can now disable "Developer mode". Chrome should keep the custom
 version even after disabling.
 
-## Generating API Keys
+#### Generating API Keys
 
 - Go to the [Google Developer's Console](https://console.developers.google.com/).
   You will need to login with a Google account.
@@ -142,7 +168,7 @@ version even after disabling.
 
 You are done creating your API Key (The Client ID).
 
-## Brave Browser
+#### Brave Browser
 
 You used to be able to use this extension with Brave Browser, but it is broken
 right now and the Brave Browser devs know about it. There isn't much they can do
@@ -173,7 +199,7 @@ that you:
 There are a variety of reasons why this isn't in any extension store, which I
 will list below:
 
-### Google Chrome / Chromium Browsers
+#### Google Chrome / Chromium Browsers
 
 I do not have this in the Chrome Extension Store because apparently Google
 requires that you pay a $5 registration fee to become an extension developer now
@@ -181,7 +207,7 @@ and honestly, I can't be bothered, and I find it kind of insulting that I spend
 my free time to make a free extension and then I have to pay Google for the
 privilege to add it to their store.
 
-### Firefox
+#### Firefox
 
 Firefox's extension system is significantly different to Chrome, and this is a
 Chrome extension. There would be added work involved in getting it working on
@@ -191,7 +217,7 @@ I am also not that familiar with extension development, and I don't even know if
 you can use the YouTube APIs from Google in Firefox, which I need in order for
 this extension to work.
 
-### Edge
+#### Edge
 
 In theory, Edge should be easy to do because it is a Chromium based browser.
 
@@ -203,7 +229,7 @@ no way for me to test if Edge even works at all.
 This also means that any changes I make in the future will have absolutely 0
 testing for Edge before an update.
 
-### Safari
+#### Safari
 
 I don't know if Safari has the ability to use the YouTube API.
 
