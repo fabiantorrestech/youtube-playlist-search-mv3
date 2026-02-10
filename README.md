@@ -23,6 +23,7 @@ You also need to ensure the project is in "Testing Mode", NOT production mode.**
 _**Note:** OAuth access tokens expire every 7 days, so you will have to re-sign back into the extension every week to keep using it._
 
 WORKING AS OF 2/10/26
+
 -----------------
 
 ## Original Description
@@ -242,6 +243,7 @@ testing for Safari before an update.
 
 I also am not familiar with Safari at all and if it even has an extension store
 or what is involved in adding it.
+
 
 
 
