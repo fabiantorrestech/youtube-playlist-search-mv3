@@ -12,7 +12,7 @@ e.g. 2
 
 
 ### How to use this extension:
-Follow all the instructions below to:
+Follow all the original author's instructions below to:
 1. Create your own unique Client ID (in the Google Cloud Developer Dashboard) & edit the Manifest.json with that Client ID
 2. Enable developer-mode in Chrome Extensions
 3. Load the entire folder for the cloned project as an Unpacked Extension in Chrome Extensions
@@ -22,6 +22,7 @@ You also need to ensure the project is in "Testing Mode", NOT production mode.**
 
 _**Note:** OAuth access tokens expire every 7 days, so you will have to re-sign back into the extension every week to keep using it._
 
+WORKING AS OF 2/10/26
 -----------------
 
 ## Original Description
@@ -241,5 +242,6 @@ testing for Safari before an update.
 
 I also am not familiar with Safari at all and if it even has an extension store
 or what is involved in adding it.
+
 
 
