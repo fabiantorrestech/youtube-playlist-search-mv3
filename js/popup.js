@@ -14,6 +14,11 @@ function showError(message) {
 
 (async function() {
     try {
+        if (!playlistID) {
+            showError("Please navigate to a YouTube playlist page to use this extension.");
+            return;
+        }
+
         if (playlistID == "WL") {
             showError("Watch Later playlist is inaccessible due to privacy concerns. Thank you for understanding.");
             return;
@@ -21,6 +26,7 @@ function showError(message) {
 
         await spinner.wrapAround(populatePopup);
     } catch(err) {
-        showError(err);
+        console.error('Extension error:', err);
+        showError(err.message || String(err));
     }
 })();

@@ -13,10 +13,12 @@ export default async function populatePopup() {
         document.querySelector('#menu').classList.add('fetch-btn');
         videos = savedVideos;
     } else {
+        console.log('Attempting to get auth token...');
         const token = await getAuthToken();
+        console.log('Token received:', token ? 'Yes' : 'No');
 
         if (!token) {
-            throw Error("couldn't retrieve YouTube API Auth Token");
+            throw Error("Couldn't retrieve YouTube API Auth Token. Please check that you've set up your own API key in manifest.json (see README.md)");
         }
 
         const duration = await timeFunction(() => fillList(token));
@@ -95,7 +97,19 @@ async function fillList(token, nextPage) {
 
 function getAuthToken() {
     const promise = new Promise((resolve, reject) => {
-        chrome.identity.getAuthToken({ 'interactive': true }, token => resolve(token));
+        chrome.identity.getAuthToken({ 'interactive': true }, token => {
+            if (chrome.runtime.lastError) {
+                console.error('Auth token error:', chrome.runtime.lastError);
+                reject(chrome.runtime.lastError);
+                return;
+            }
+            if (!token) {
+                console.error('No token received');
+                reject(new Error('No token received'));
+                return;
+            }
+            resolve(token);
+        });
     });
 
     return promise;

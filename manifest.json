@@ -5,33 +5,31 @@
   "version": "21.04.01",
   "description": "Search for videos in a YouTube™ playlist.",
   "background": {
-    "scripts": ["/js/background.js"],
-    "persistent": false,
-    "pages": ["popup.html"]
+    "service_worker": "/js/background.js"
   },
-  "page_action" :
-  {
-    "default_title" : "Search this playlist",
-    "default_popup" : "popup.html"
+  "action": {
+    "default_title": "Search this playlist",
+    "default_popup": "popup.html"
   },
   "icons": {
+    "16": "/img/icon-48.png",
     "48": "/img/icon-48.png",
     "128": "/img/icon-128.png"
   },
-  "permissions" : [
+  "permissions": [
     "storage",
-    "declarativeContent",
     "tabs",
-    "identity",
-    "http://www.youtube.com/*",
+    "identity"
+  ],
+  "host_permissions": [
     "https://www.youtube.com/*"
   ],
   "oauth2": {
-    "client_id": "104618134280-roirvkp72379ll5d19ej7gl7128l5jk9.apps.googleusercontent.com",
+    "client_id": "741648113517-bh6iv5ber1ioi5l5bjgkh2rlb3go4sk3.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/youtube.readonly"
     ]
   },
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAps65nbsGLdA55FuGZlpzPiZOdV+umwFK4gFOYnUDVcqp6NQ8OxGY5+qQ40tFlBgrwAbhCknHumgFQJyQBnYUhJNSO5macvXjXi1Fg6ZwWoaglQbbmXUWmXFsBq5DwR514qT/0ER70n35RpM1u7fgMGga8yHm3l3YjVRoEuN7qqHj1mRN3EbHnZUQbCT91JhZqfhaVkEEAvsznCZ3xbKDhCydSs5753cEk0tWeVFkTfE74FIoV9vi1nDHS2qjtcaNQSUmOTeBys6hZkXRgPDQl5NWwFd6xx85txQ4sbDMX0WNR9Qc/IAZlhigxaGr/UD0qTz0GpIRGU0KkNQEs/lw5wIDAQAB",
-  "manifest_version": 2
+  "manifest_version": 3
 }
