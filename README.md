@@ -1,5 +1,5 @@
 # Youtube Playlist Search
-## Fabian's changes
+## Fabian's Description
 Hi all, I have VERY large playlists on Youtube (as a result of migrating my Spotify playlists over) and I needed a quick solution to be able index and search these playlists. This extension by hallzy worked but had to updated to Manifest V3 to work. This is a very rough port, but it does work!
 
 **It currently only works with Chrome** (Not sure about other Chromium browsers... I know MS Edge says theres an imcompatible API, haven't looked too deep into it).
