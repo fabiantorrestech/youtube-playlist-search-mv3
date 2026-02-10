@@ -2,7 +2,7 @@
 ## Fabian's Description
 Hi all, I have VERY large playlists on Youtube (as a result of migrating my Spotify playlists over) and I needed a quick solution to be able index and search these playlists. This extension by hallzy worked but had to updated to Manifest V3 to work. This is a very rough port, but it does work!
 
-**It currently only works with Chrome** (Not sure about other Chromium browsers... I know MS Edge says theres an imcompatible API, haven't looked too deep into it).
+**It currently only works with Chrome** ( I know MS Edge says theres an imcompatible API, haven't looked too deep into it. Not sure about other Chromium browsers...).
 
 e.g. 1
 <img width="984" height="871" alt="image" src="https://github.com/user-attachments/assets/ea78f705-4b8d-42c3-91cb-7848ab67b340" />
@@ -10,10 +10,17 @@ e.g. 1
 e.g. 2
 <img width="976" height="866" alt="image" src="https://github.com/user-attachments/assets/ff56d4bd-5f29-42a1-bd10-d543cb935e7a" />
 
-Follow the instructions below to create your own unique Client ID, and then after that you need to go Audience > Test Users > "add your youtube email here".
-You also need to ensure the project is in "Testing Mode", NOT production mode.
 
-Note: OAuth access tokens expire every 7 days, so you will have to re-sign back into the extension every week to keep using it.
+### How to use this extension:
+Follow all the instructions below to:
+1. Create your own unique Client ID (in the Google Cloud Developer Dashboard) & edit the Manifest.json with that Client ID
+2. Enable developer-mode in Chrome Extensions
+3. Load the entire folder for the cloned project as an Unpacked Extension in Chrome Extensions
+
+**In the Google Cloud Developer Dashboard screen, after that you need to go Audience > Test Users > "add your youtube email here".
+You also need to ensure the project is in "Testing Mode", NOT production mode.**
+
+_**Note:** OAuth access tokens expire every 7 days, so you will have to re-sign back into the extension every week to keep using it._
 
 -----------------
 
